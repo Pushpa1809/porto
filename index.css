@@ -236,7 +236,7 @@ nav ul a.active {
   transform: translateY(-2px);
 }
 
-/* ==============================
+/* /* ==============================
    CONTENT SECTIONS
    ============================== */
 .section {
@@ -268,4 +268,124 @@ nav ul a.active {
   .hero img { width: 140px; height: 140px; }
   .hero h1 { font-size: 2.5rem; }
   .section { margin: 2rem auto; }
+} */
+/* ===========================
+   RESET & BASE
+   =========================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(to right, #f0f2f5, #e2e8f0);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+header {
+  background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul a {
+  color: #ddd;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: .5rem 0;
+  transition: color .3s, border-bottom .3s;
+}
+
+nav ul a:hover,
+nav ul a.active {
+  color: #ffb703;
+  border-bottom: 2px solid #ffb703;
+}
+
+/* ===========================
+   SKILLS SECTION
+   =========================== */
+.section.skills {
+  background: #fff;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.section.skills h2 {
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-grid li {
+  background: linear-gradient(135deg, #ffb703, #fb8500);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+
+.skill-grid li:hover {
+  transform: translateY(-4px);
+}
+
+/* ===========================
+   HERO & BUTTONS (Left as is)
+   =========================== */
+/* … your existing hero + button styles … */
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  nav { padding: 1rem; }
+  nav ul { gap: 1rem; }
+  .section.skills { padding: 2rem 1rem; }
+  .skill-grid { gap: 1rem; }
 }
